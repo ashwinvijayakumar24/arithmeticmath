@@ -40,8 +40,6 @@ const Setup = () => {
         else {
             document.getElementById('custom-input-validator').style.display = "none";
         }
-        console.log('Problem Types:', problemTypes);
-        console.log('Number of Questions:', numberOfQuestions);
         document.getElementById('setup-container').style.display = 'none';
         document.getElementById('problems-container').style.display = 'flex';
         problems(problemTypes, numberOfQuestions);

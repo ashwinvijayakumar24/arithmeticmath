@@ -10,9 +10,6 @@ let totalCount = 0;
 const correctAudio = new Audio(correctSound);
 const incorrectAudio = new Audio(incorrectSound);
 
-
-
-
 export function problems(types, problems) {
 
     let additionProblems = Math.floor(problems / types.length);
@@ -46,7 +43,6 @@ export function problems(types, problems) {
                 numTwoAddition = Math.floor(Math.random() * 21);
             }
             
-            // console.log(combinedRandomArray);
         }
         if(types[i] === "Subtraction") {
             let numOneSubtraction = Math.floor(Math.random() * 11) + 10;
@@ -57,7 +53,6 @@ export function problems(types, problems) {
                 numOneSubtraction = Math.floor(Math.random() * 11) + 10;
                 numTwoSubtraction = Math.floor(Math.random() * 11);
             }
-            // console.log(combinedRandomArray);
         }
         if(types[i] === "Multiplication") {
             let numOneMultiplication = Math.floor(Math.random() * 13);
@@ -68,7 +63,6 @@ export function problems(types, problems) {
                 numOneMultiplication = Math.floor(Math.random() * 13);
                 numTwoMultiplication = Math.floor(Math.random() * 13);
             }
-            // console.log(combinedRandomArray);
         }
         if(types[i] === "Division") {
             let numOneDivision;
@@ -92,7 +86,6 @@ export function problems(types, problems) {
                     numTwoDivision = Math.floor(Math.random() * 12) + 1;
                 } while (!(numOneDivision % numTwoDivision === 0 || numTwoDivision % numOneDivision === 0)  || Math.floor(numOneDivision / numTwoDivision) > 9 || Math.floor(numTwoDivision / numOneDivision) > 9);
             }
-            // console.log(combinedRandomArray);
         }
     }
     displayProblems();
