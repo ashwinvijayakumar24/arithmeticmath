@@ -7,6 +7,10 @@ let questionCount = 0;
 let randomIndex = (Math.floor(Math.random() * combinedRandomArray.length));
 let correctCount = 0;
 let totalCount = 0;
+const correctAudio = new Audio(correctSound);
+const incorrectAudio = new Audio(incorrectSound);
+
+
 
 
 export function problems(types, problems) {
@@ -125,7 +129,6 @@ export function validateAnswer() {
         document.getElementById('next-button').style.display = 'block';
         document.getElementById('answer-input').style.display = 'none';
         if(parseInt(value) === answersArray[randomIndex]) {
-            const correctAudio = new Audio(correctSound);
             correctAudio.play();
             correctCount += 1;
             totalCount += 1;
@@ -135,7 +138,6 @@ export function validateAnswer() {
             randomIndex = (Math.floor(Math.random() * combinedRandomArray.length));
         }
         else {
-            const incorrectAudio = new Audio(incorrectSound);
             incorrectAudio.play();
             totalCount += 1;
             document.getElementById('individual-problem').innerHTML = `Sorry, the correct answer was ${answersArray[randomIndex]}`;
