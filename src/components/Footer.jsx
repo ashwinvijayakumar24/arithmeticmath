@@ -70,9 +70,6 @@ const Footer = () => {
         <div className="copyright-notice">
           <h5>Copyright © 2023 Ashwin Vijayakumar </h5>
         </div>
-        <div className="personal-site-link">
-          <a href="https://ashwinvijayakumar.com" target="_blank" rel="noreferrer"><h5>https://ashwinvijayakumar.com</h5></a>
-        </div>
       </div>
     </div>
     )
